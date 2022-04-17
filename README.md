@@ -32,7 +32,7 @@ Example for how to use the APIs:
     }
 
 
-You can also use the showBanner API with defaults values:
+You can also use the showBanner API with default values:
   
     MDBannerView.showBanner(title: "title",
                             message: "message")
