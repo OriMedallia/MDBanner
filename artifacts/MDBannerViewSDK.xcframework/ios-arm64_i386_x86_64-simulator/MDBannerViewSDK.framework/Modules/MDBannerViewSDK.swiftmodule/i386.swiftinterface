@@ -1,0 +1,29 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MDBannerViewSDK
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+@objc public protocol MDBannerViewDelegate {
+  @objc optional func bannerDidDismiss()
+  @objc optional func acceptButtonDidTap()
+  @objc optional func closeButtonDidTap()
+}
+@objc public enum MDBannerPosition : Swift.Int {
+  case top = 0
+  case banner = 1
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class MDBannerView : ObjectiveC.NSObject {
+  public static func showBanner(title: Swift.String, message: Swift.String, textColor: UIKit.UIColor? = nil, backgroundColor: UIKit.UIColor? = nil, position: MDBannerViewSDK.MDBannerPosition = .top, timeout: Swift.Double? = nil, acceptButtonText: Swift.String? = "", acceptButtonTextColor: UIKit.UIColor? = .black, acceptButtonBackgroundColor: UIKit.UIColor? = .black, closeButtonColor: UIKit.UIColor? = .black, buttonsDisplay: Swift.Bool? = false, isSticky: Swift.Bool? = false, isPartial: Swift.Bool? = true)
+  @objc public static func setBannerViewDelegate(_ bannerViewDelegate: MDBannerViewSDK.MDBannerViewDelegate)
+  @objc deinit
+}
+extension MDBannerViewSDK.MDBannerPosition : Swift.Equatable {}
+extension MDBannerViewSDK.MDBannerPosition : Swift.Hashable {}
+extension MDBannerViewSDK.MDBannerPosition : Swift.RawRepresentable {}

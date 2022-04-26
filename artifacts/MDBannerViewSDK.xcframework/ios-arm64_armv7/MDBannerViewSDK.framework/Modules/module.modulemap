@@ -1,0 +1,4 @@
+framework module MDBannerViewSDK {
+  header "MDBannerViewSDK-Swift.h"
+  requires objc
+}
